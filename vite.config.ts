@@ -7,7 +7,7 @@ import { resolve } from "path"; // path 模块提供了一些工具函数，用�
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: process.env.NODE_ENV === "production" ? "./" : "/",
+	base: "./",
 	plugins: [
 		vue(),
 		AutoImport({
