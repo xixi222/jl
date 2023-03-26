@@ -90,7 +90,7 @@ onMounted(() => {
 		<span
 			id="s1"
 			style="margin: 25px 0 18px 0; opacity: 0; transform: translateY(30px)"
-			>The Online resume</span
+			>The Online Resume</span
 		><br />
 		<span id="s2" style="opacity: 0; transform: translateY(30px)"
 			>The dog rides Lv Bu</span

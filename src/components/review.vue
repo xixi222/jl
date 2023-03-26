@@ -29,7 +29,7 @@
 							src="@/assets/white-dot.png"
 							alt="111"
 							style="width: 20px; height: 20px"
-							@click="imgHandle('./src/assets/white-dot.png')"
+							@click="imgHandle('')"
 						/>
 					</h3>
 				</li>
@@ -52,10 +52,7 @@
 				</li>
 			</ul>
 		</Transition>
-		<Preview
-			:urlList="['./src/assets/white-dot.png', './src/assets/vite.svg']"
-			v-model="visible"
-		></Preview>
+		<Preview :urlList="arr2" v-model="visible"></Preview>
 	</div>
 </template>
 
@@ -65,6 +62,11 @@ import { initThree2 } from "../threets/review";
 import Preview from "vue3-preview";
 const three = ref();
 const arr = ["在校实习经历", "工作项目经历", ""];
+
+const arr2 = [
+	new URL("@/assets/white-dot.png", import.meta.url),
+	new URL("@/assets/vite.svg", import.meta.url),
+];
 const fa = ref();
 const visible = ref(false);
 const index = ref(null);
