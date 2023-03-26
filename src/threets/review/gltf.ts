@@ -5,7 +5,7 @@ const manager = new LoadingManager();
 const gltfLoader = new GLTFLoader(manager);
 const bufArrays = [];
 
-gltfLoader.load("./src/assets/box.glb", (gltf) => {
+gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 	gltf.scene.traverse((child: any) => {
 		if (child.isMesh) {
 			child.geometry.translate(-1.5, 0.1, 0);
@@ -16,7 +16,7 @@ gltfLoader.load("./src/assets/box.glb", (gltf) => {
 		}
 	});
 });
-gltfLoader.load("./src/assets/box1.glb", (gltf) => {
+gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 	gltf.scene.traverse((child: any) => {
 		if (child.isMesh) {
 			child.geometry.scale(0.5, 0.5, 0.5);
@@ -28,7 +28,7 @@ gltfLoader.load("./src/assets/box1.glb", (gltf) => {
 		}
 	});
 });
-gltfLoader.load("./src/assets/sphere.glb", (gltf) => {
+gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 	gltf.scene.traverse((child: any) => {
 		if (child.isMesh) {
 			child.geometry.translate(-1.4, 0.1, 0);
