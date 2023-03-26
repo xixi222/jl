@@ -19,7 +19,7 @@ map.crossOrigin = "";
 const star = new Points(
 	geo,
 	new PointsMaterial({
-		map: map.load("./src/assets/white-dot.png"),
+		map: map.load(new URL("@/assets/white-dot.png", import.meta.url).href),
 		transparent: true,
 		depthTest: true,
 	})

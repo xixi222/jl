@@ -28,7 +28,7 @@ let points = new Points(
 	geometry,
 	new PointsMaterial({
 		size: 0.05,
-		map: map.load("./src/assets/white-dot.png"),
+		map: map.load(new URL("@/assets/white-dot.png", import.meta.url).href),
 		alphaTest: 0.1,
 		// opacity: 0.5,
 		transparent: true,
