@@ -9,10 +9,15 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    404: typeof import('./src/components/404.vue')['default']
+    About: typeof import('./src/components/review/about.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Main: typeof import('./src/components/main.vue')['default']
+    Practice: typeof import('./src/components/review/practice.vue')['default']
     Review: typeof import('./src/components/review.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Thank: typeof import('./src/components/review/thank.vue')['default']
+    Works: typeof import('./src/components/review/works.vue')['default']
   }
 }

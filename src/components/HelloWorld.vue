@@ -7,6 +7,9 @@ import { gsap } from "gsap";
 import { lights } from "../threets/home/lights";
 import { ElMessage } from "element-plus";
 import { useRoute, useRouter } from "vue-router";
+if (!sessionStorage.getItem("time")) {
+	sessionStorage.setItem("time", String(new Date().getTime()));
+}
 const three = ref();
 let router = useRouter();
 
@@ -27,6 +30,12 @@ function copyText() {
 }
 let clic = () => {};
 onMounted(() => {
+	// window.onbeforeunload = function () {
+	// 	console.log("close");
+
+	// 	return "是否要离开";
+	// };
+
 	const init = new initThree(three.value);
 	clic = function () {
 		isShow.value = false;

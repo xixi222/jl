@@ -18,6 +18,8 @@ gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 });
 gltfLoader.load(new URL("@/assets/box1.glb", import.meta.url).href, (gltf) => {
 	gltf.scene.traverse((child: any) => {
+		console.log(child.geometry);
+
 		if (child.isMesh) {
 			child.geometry.scale(0.5, 0.5, 0.5);
 			child.geometry.translate(1.7, 0.1, 0);
@@ -28,6 +30,26 @@ gltfLoader.load(new URL("@/assets/box1.glb", import.meta.url).href, (gltf) => {
 		}
 	});
 });
+
+gltfLoader.load(new URL("@/assets/qq1.glb", import.meta.url).href, (gltf) => {
+	gltf.scene.traverse((child: any) => {
+		if (child.isMesh) {
+			// child.geometry.translate(-1.4, 0.1, 0);
+			child.geometry.scale(0.8, 0.8, 0.8);
+			console.log(child.geometry);
+			child.geometry.rotateX(Math.PI / 2);
+			// child.geometry.rotateZ(Math.PI);
+			child.geometry.translate(0, 0, 4);
+
+			// child.geometry.rotateZ = Math.PI / 2;
+			// child.geometry.rotateY = Math.PI / 2;
+
+			const { array } = child.geometry.attributes.position;
+			bufArrays.push(array);
+		}
+	});
+});
+
 gltfLoader.load(
 	new URL("@/assets/sphere.glb", import.meta.url).href,
 	(gltf) => {

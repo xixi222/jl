@@ -10,7 +10,7 @@ let geometry = new BufferGeometry();
 
 const vertices = [];
 let randomL = [];
-for (let i = 0; i < 600; i++) {
+for (let i = 0; i < 300; i++) {
 	if (i % 3 == 0) {
 		const x = Math.random() * 4 - 1.2;
 		const y = Math.random() * 3 - 1.5;

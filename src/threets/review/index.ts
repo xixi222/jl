@@ -82,7 +82,7 @@ export class initThree2 {
 			b.rotation.y = roin + mouse.x * 0.5;
 
 			frame += 0.01;
-			for (let i = 0; i < 900; i++) {
+			for (let i = 0; i < 300; i++) {
 				if (i % 3 == 0) {
 					points2.geometry.attributes.position["array"][i] =
 						vertices[i] + Math.sin(frame + randomL[i]) * 0.3;
@@ -94,7 +94,7 @@ export class initThree2 {
 			}
 			points2.geometry.attributes.position.needsUpdate = true;
 			frame += 0.01;
-			for (let i = 0; i < 300; i++) {
+			for (let i = 0; i < 200; i++) {
 				if (i % 3 == 0) {
 					points3.geometry.attributes.position["array"][i] =
 						vertices2[i] + Math.cos(frame + randomL2[i]) * 0.3;
@@ -121,7 +121,7 @@ export class initThree2 {
 	}
 
 	transition(current: number) {
-		for (let i = 0, j = 0; i < 26016; i++, j++) {
+		for (let i = 0, j = 0; i < 27468; i++, j++) {
 			//26016
 			const item = points.geometry["tween"][i];
 

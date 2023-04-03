@@ -11,7 +11,7 @@ let geometry = new BufferGeometry();
 geometry["tween"] = [];
 const vertices = [];
 
-for (let i = 0; i < 26016; i++) {
+for (let i = 0; i < 27468; i++) {
 	const position = MathUtils.randFloat(-4, 4);
 	geometry["tween"].push(
 		new TWEEN.Tween({ position }).easing(TWEEN.Easing.Exponential.In)
