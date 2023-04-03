@@ -58,4 +58,7 @@ min-width: -moz-max-content;
 	background-color: rgba(177, 215, 177, 0.3) !important;
   border: none !important;
 }
+.preview__icon[title="原图"] { 
+display: none;
+}
 
