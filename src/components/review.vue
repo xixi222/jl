@@ -23,6 +23,8 @@
 import { ref, onMounted, watchEffect } from "vue";
 import { initThree2 } from "../threets/review";
 import { useRouter } from "vue-router";
+import { manager, bufArrays } from "../threets/review/gltf";
+
 const router = useRouter();
 
 const three = ref();
@@ -36,10 +38,13 @@ let num = 0;
 onMounted(() => {
 	index.value = 0;
 	let init = new initThree2(three.value);
+	manager.onLoad = () => {
+		init.transition(bufArrays[0]);
+	};
 	ccc = (a, e) => {
 		if (index.value != a) {
 			index.value = a;
-			init.transition(a);
+			init.transition(bufArrays[a]);
 		}
 	};
 

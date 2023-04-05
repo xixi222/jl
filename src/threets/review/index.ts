@@ -11,7 +11,7 @@ import {
 	WebGLRenderer,
 } from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { manager, bufArrays } from "./gltf";
+// import { manager, bufArrays } from "./gltf";
 import points from "./points";
 import { points2, randomL, vertices } from "./points2";
 import { points3, randomL2, vertices2 } from "./points3";
@@ -55,9 +55,9 @@ export class initThree2 {
 			this.camera.aspect = this.dom.offsetWidth / this.dom.offsetHeight;
 			this.camera.updateProjectionMatrix();
 		});
-		manager.onLoad = () => {
-			this.transition(0);
-		};
+		// manager.onLoad = () => {
+		// 	this.transition(0);
+		// };
 		this.scene.add(points2);
 		this.scene.add(points3);
 		// new OrbitControls(this.camera, dom);
@@ -121,19 +121,16 @@ export class initThree2 {
 		});
 	}
 
-	transition(current: number) {
+	transition(current) {
 		for (let i = 0, j = 0; i < 27468; i++, j++) {
 			//26016
 			const item = points.geometry["tween"][i];
 
-			if (j >= bufArrays[current].length) {
+			if (j >= current.length) {
 				j = 0;
 			}
 			item
-				.to(
-					{ position: bufArrays[current][j] },
-					MathUtils.randFloat(1000, 4000)
-				)
+				.to({ position: current[j] }, MathUtils.randFloat(1000, 4000))
 				.onUpdate(function () {
 					points.geometry.attributes.position["array"][i] =
 						this._object.position;
