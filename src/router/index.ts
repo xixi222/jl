@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import {
+	createRouter,
+	createWebHashHistory,
+	createWebHistory,
+	RouteRecordRaw,
+} from "vue-router";
 let routes: RouteRecordRaw[] = [
 	{
 		path: "/hello",
@@ -46,7 +51,7 @@ let routes: RouteRecordRaw[] = [
 	},
 ];
 let router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes,
 });
 let old = 0;
