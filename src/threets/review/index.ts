@@ -75,11 +75,12 @@ export class initThree2 {
 		}, 25);
 
 		let roin = points.rotation.y;
+		let roinx = points.rotation.x;
 		const renderFn = () => {
-			// b.rotation.z += 0.001;
 			// console.log(b.rotation.x);
-			b.rotation.x = roin - mouse.y * 0.2;
-			b.rotation.y = roin + mouse.x * 0.5;
+			b.rotation.x = roinx - mouse.y * 0.2;
+			b.rotation.y = roin + mouse.x * 0.3;
+			// b.rotation.z += 0.001;
 
 			frame += 0.01;
 			for (let i = 0; i < 300; i++) {
