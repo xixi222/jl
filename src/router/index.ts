@@ -32,6 +32,10 @@ let routes: RouteRecordRaw[] = [
 		],
 	},
 	{
+		path: "/404",
+		component: () => import("../components/404.vue"),
+	},
+	{
 		path: "/",
 		redirect: "/hello",
 	},
