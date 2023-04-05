@@ -8,10 +8,7 @@ let routes: RouteRecordRaw[] = [
 		path: "/main",
 		component: () => import("../components/main.vue"),
 	},
-	{
-		path: "/404",
-		component: () => import("../components/404.vue"),
-	},
+
 	{
 		path: "/review",
 		component: () => import("../components/review.vue"),

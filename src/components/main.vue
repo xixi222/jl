@@ -83,24 +83,24 @@ let x = data[0].value;
 let p = ((Number(x) * 100) / Number(s)).toFixed(2);
 let sec = `<p>感谢您的预览</p><p>本次您预览总时长为${s}秒</p><p>您最感兴趣的页面是${y}</p><p>预览了${x}秒，占总时长${p}%</p>`;
 
-// const axios = inject<AxiosStatic>("$axios");
-// axios
-// 	.get("https://4adb5f06.r1.vip.cpolar.cn/update", {
-// 		params: {
-// 			time,
-// 			hello: arr[0],
-// 			practice: arr[1],
-// 			works: arr[2],
-// 			about: arr[3],
-// 			nownot: arr[4],
-// 		},
-// 	})
-// 	.then((resp) => {
-// 		console.log(resp.data);
-// 	})
-// 	.catch((err) => {
-// 		console.log(err);
-// 	});
+const axios = inject<AxiosStatic>("$axios");
+axios
+	.get("https://4adb5f06.r1.vip.cpolar.cn/update", {
+		params: {
+			time,
+			hello: arr[0],
+			practice: arr[1],
+			works: arr[2],
+			about: arr[3],
+			nownot: arr[4],
+		},
+	})
+	.then((resp) => {
+		console.log(resp.data);
+	})
+	.catch((err) => {
+		console.log(err);
+	});
 onMounted(() => {
 	let chartDom = document.getElementById("chart");
 	let myChart = echarts.init(chartDom);
