@@ -100,7 +100,7 @@ let headers = {
 };
 let blob = new Blob([JSON.stringify(params)], headers);
 axios
-	.get("http://578e223c.r6.vip.cpolar.cn/update", {
+	.get("http://49ccc63e.r6.vip.cpolar.cn/update", {
 		params: {
 			time,
 			hello: arr[0],
