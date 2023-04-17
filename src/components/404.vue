@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<img
-			src="@/assets/404.gif"
+			:src="src"
 			style="width: 100%; height: 100%; position: absolute; top: 0"
 			alt="404"
 		/>
@@ -29,6 +29,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+let src = new URL("@/assets/404.gif", import.meta.url).href;
 let router = useRouter();
 let goBack = () => {
 	router.push("/hello");

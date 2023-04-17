@@ -24,11 +24,14 @@ import { ref, onMounted, watchEffect } from "vue";
 import { initThree2 } from "../threets/review";
 import { useRouter } from "vue-router";
 import { manager, bufArrays } from "../threets/review/gltf";
-
+if (location.href.indexOf("#now") == -1) {
+	location.href = location.href + "#now";
+	location.reload();
+}
 const router = useRouter();
 
 const three = ref();
-const arr = ["在校实习经历", "工作项目经历", "联系到我", "感谢阅览"];
+const arr = ["工作项目经历", "在校实习经历", "联系方式", "感谢阅览"];
 
 const fa = ref();
 const index = ref(null);
@@ -61,16 +64,16 @@ onMounted(() => {
 
 	watchEffect(() => {
 		if (index.value == 0) {
-			router.push("/review/practice");
+			router.replace("/review/works");
 		}
 		if (index.value == 1) {
-			router.push("/review/works");
+			router.replace("/review/practice");
 		}
 		if (index.value == 2) {
-			router.push("/review/about");
+			router.replace("/review/about");
 		}
 		if (index.value == 3) {
-			router.push("/review/thank");
+			router.replace("/review/thank");
 		}
 	});
 	// window.addEventListener("mousewheel", (e: any) => {

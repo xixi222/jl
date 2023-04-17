@@ -52,6 +52,7 @@
 import { AxiosStatic } from "axios";
 import * as echarts from "echarts";
 import { ref, onMounted, inject } from "vue";
+
 const time = sessionStorage.getItem("time");
 const arr = [
 	Number(sessionStorage.getItem("/hello")),
@@ -60,7 +61,7 @@ const arr = [
 	Number(sessionStorage.getItem("/review/about")),
 	Number(sessionStorage.getItem("/404")),
 ];
-const data = [
+let data = [
 	{ value: arr[0].toFixed(2), name: "主页浏览时长" },
 	{ value: arr[1].toFixed(2), name: "'实习'页浏览时长" },
 	{ value: arr[2].toFixed(2), name: "'工作'页浏览时长" },
@@ -69,7 +70,9 @@ const data = [
 ].sort(function (a, b) {
 	return Number(b.value) - Number(a.value);
 });
-
+data = data.filter((item) => {
+	return item.value != "0.00";
+});
 function one(arr) {
 	let sum = 0;
 	arr.map(function (item) {
@@ -84,8 +87,20 @@ let p = ((Number(x) * 100) / Number(s)).toFixed(2);
 let sec = `<p>感谢您的预览</p><p>本次您预览总时长为${s}秒</p><p>您最感兴趣的页面是${y}</p><p>预览了${x}秒，占总时长${p}%</p>`;
 
 const axios = inject<AxiosStatic>("$axios");
+const params = {
+	time,
+	hello: arr[0],
+	practice: arr[1],
+	works: arr[2],
+	about: arr[3],
+	nownot: arr[4],
+};
+let headers = {
+	type: "application/x-www-form-urlencoded",
+};
+let blob = new Blob([JSON.stringify(params)], headers);
 axios
-	.get("https://4adb5f06.r1.vip.cpolar.cn/update", {
+	.get("http://578e223c.r6.vip.cpolar.cn/update", {
 		params: {
 			time,
 			hello: arr[0],

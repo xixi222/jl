@@ -1,7 +1,17 @@
 <template>
 	<ul class="ul1">
-		<li style="text-align: center; margin-bottom: 16px !important">
-			<h3 style="font-size: 26px; display: inline-block">游戏管理系统</h3>
+		<li>
+			<vuetyped
+				id="levealTop"
+				style="font-size: 25px"
+				:strings="['手机QQ或微信扫描二维码 了解更多']"
+				:loop="true"
+				:typeSpeed="80"
+				:smart-backspace="false"
+				:showCursor="true"
+			>
+				<div class="typing"></div>
+			</vuetyped>
 		</li>
 	</ul>
 </template>
@@ -18,8 +28,8 @@ import { ref } from "vue";
 	background-color: rgba(250, 235, 215, 0);
 	color: #d0c6c6;
 	position: fixed;
-	right: 150px;
-	top: 120px;
+	right: 80px;
+	top: 250px;
 	li {
 		font-size: 16px;
 		margin-bottom: 30px;

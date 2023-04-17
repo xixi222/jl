@@ -61,4 +61,11 @@ min-width: -moz-max-content;
 .preview__icon[title="原图"] { 
 display: none;
 }
+.preview__img{
+	
+		width: 1200px;
+		height: fit-content;
+
+	
+}
 

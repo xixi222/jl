@@ -1,5 +1,5 @@
 import TWEEN from "@tweenjs/tween.js";
-import Stats from "three/examples/jsm/libs/stats.module.js";
+// import Stats from "three/examples/jsm/libs/stats.module.js";
 import {
 	CanvasTexture,
 	FogExp2,
@@ -23,20 +23,20 @@ export class initThree2 {
 	private camera: PerspectiveCamera;
 	arr: number[] = [-1.5, 0.1, 0];
 	constructor(dom: HTMLElement) {
-		let stats = Stats();
+		// let stats = Stats();
 
 		this.dom = dom;
-		stats.setMode(0);
-		stats.domElement.style.position = "absolute";
-		stats.domElement.style.left = "0px";
-		stats.domElement.style.top = "0px";
+		// stats.setMode(0);
+		// stats.domElement.style.position = "absolute";
+		// stats.domElement.style.left = "0px";
+		// stats.domElement.style.top = "0px";
 
-		this.dom.appendChild(stats.domElement);
+		// this.dom.appendChild(stats.domElement);
 		this.scene = new Scene();
 		// this.scene.background = backgroundTexture();
 		this.render = new WebGLRenderer({ antialias: true });
 		this.render.shadowMap.enabled = true;
-		this.scene.fog = new FogExp2(0x05050c, 0.16);
+		this.scene.fog = new FogExp2(0x05050c, 0.14);
 		// this.render.setClearColor(this.scene.fog.color);
 		this.camera = new PerspectiveCamera(
 			45,
@@ -109,7 +109,7 @@ export class initThree2 {
 			}
 			points3.geometry.attributes.position.needsUpdate = true;
 			TWEEN.update();
-			stats.update();
+			// stats.update();
 			this.render.render(this.scene, this.camera);
 			requestAnimationFrame(renderFn);
 		};

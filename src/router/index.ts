@@ -11,6 +11,7 @@ let routes: RouteRecordRaw[] = [
 	},
 	{
 		path: "/main",
+
 		component: () => import("../components/main.vue"),
 	},
 

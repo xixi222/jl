@@ -8,7 +8,7 @@ const bufArrays = [];
 gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 	gltf.scene.traverse((child: any) => {
 		if (child.isMesh) {
-			child.geometry.translate(-1.5, 0.1, 0);
+			child.geometry.translate(-1.2, 0.1, 0);
 
 			// child.geometry.translate(0, 0.5, 0);
 			const { array } = child.geometry.attributes.position;
@@ -35,9 +35,8 @@ gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 				(gltf) => {
 					gltf.scene.traverse((child: any) => {
 						if (child.isMesh) {
-							// child.geometry.translate(-1.4, 0.1, 0);
+							child.geometry.translate(-1.0, 0.4, 0);
 							child.geometry.scale(0.8, 0.8, 0.8);
-							console.log(child.geometry);
 							child.geometry.rotateX(Math.PI / 2);
 							// child.geometry.rotateZ(Math.PI);
 							child.geometry.translate(0, 0, 4);
@@ -54,7 +53,7 @@ gltfLoader.load(new URL("@/assets/box.glb", import.meta.url).href, (gltf) => {
 						(gltf) => {
 							gltf.scene.traverse((child: any) => {
 								if (child.isMesh) {
-									child.geometry.translate(-1.4, 0.1, 0);
+									child.geometry.translate(1.3, 0.1, 0);
 									child.geometry.scale(1.2, 1.2, 1.2);
 
 									const { array } = child.geometry.attributes.position;

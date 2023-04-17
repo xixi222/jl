@@ -5,7 +5,7 @@ import { objs } from "../threets/home/3Dobj";
 import star from "../threets/home/starts";
 import { gsap } from "gsap";
 import { lights } from "../threets/home/lights";
-import { ElMessage } from "element-plus";
+// import { ElMessage } from "element-plus";
 import { useRoute, useRouter } from "vue-router";
 if (!sessionStorage.getItem("time")) {
 	sessionStorage.setItem("time", String(new Date().getTime()));
@@ -22,11 +22,11 @@ function copyText() {
 	aux.select();
 	document.execCommand("copy");
 	document.body.removeChild(aux);
-	ElMessage({
-		message: "复制成功",
-		type: "success",
-		customClass: "messageBox",
-	});
+	// ElMessage({
+	// 	message: "复制成功",
+	// 	type: "success",
+	// 	customClass: "messageBox",
+	// });
 }
 let clic = () => {};
 onMounted(() => {
@@ -114,13 +114,13 @@ onMounted(() => {
 			START
 		</button>
 	</div>
-	<aside class="description" v-if="isShow">
+	<!-- <aside class="description" v-if="isShow">
 		<span>新页面打开管理系统</span><br />
 		<span>账号 : {{ manager }}</span
 		><br />
 		<span>密码 : {{ manager }}</span>
 		<button @click="copyText">复制账号密码并打开</button>
-	</aside>
+	</aside> -->
 </template>
 
 <style scoped lang="less">
