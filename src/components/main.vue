@@ -59,14 +59,14 @@ const arr = [
 	Number(sessionStorage.getItem("/review/practice")),
 	Number(sessionStorage.getItem("/review/works")),
 	Number(sessionStorage.getItem("/review/about")),
-	Number(sessionStorage.getItem("/404")),
+	Number(sessionStorage.getItem("/review/thank")),
 ];
 let data = [
 	{ value: arr[0].toFixed(2), name: "主页浏览时长" },
 	{ value: arr[1].toFixed(2), name: "'实习'页浏览时长" },
 	{ value: arr[2].toFixed(2), name: "'工作'页浏览时长" },
 	{ value: arr[3].toFixed(2), name: "'联系'页浏览时长" },
-	{ value: arr[4].toFixed(2), name: "'404'页浏览时长" },
+	{ value: arr[4].toFixed(2), name: "'感谢'页浏览时长" },
 ].sort(function (a, b) {
 	return Number(b.value) - Number(a.value);
 });
@@ -100,7 +100,7 @@ let headers = {
 };
 let blob = new Blob([JSON.stringify(params)], headers);
 axios
-	.get("http://49ccc63e.r6.vip.cpolar.cn/update", {
+	.get("http://3316f45a.r2.vip.cpolar.cn/update", {
 		params: {
 			time,
 			hello: arr[0],
