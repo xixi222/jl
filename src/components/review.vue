@@ -24,7 +24,10 @@ import { ref, onMounted, watchEffect } from "vue";
 import { initThree2 } from "../threets/review";
 import { useRouter } from "vue-router";
 import { manager, bufArrays } from "../threets/review/gltf";
-if (location.href.indexOf("#now") == -1) {
+if (
+	location.href.indexOf("#now") == -1 &&
+	sessionStorage.getItem("/review/works")
+) {
 	location.href = location.href + "#now";
 	location.reload();
 }
