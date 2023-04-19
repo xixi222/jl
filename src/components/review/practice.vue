@@ -21,7 +21,7 @@
 						>主要职责:视屏轮播，多按钮组合，echarts图表，时间等低代码组件及其属性设置界面开发</span
 					>
 					<span style="line-height: 22px; display: inline-block"
-						>主要技术栈为:Vue、ElementUI、ECharts、HighChart、sass</span
+						>主要技术栈为:Vue、ElementUI、ECharts、HighChart、sass等</span
 					>
 					<span
 						style="color: #00a999; cursor: pointer; margin-top: 8px"
