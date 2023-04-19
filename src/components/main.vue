@@ -95,12 +95,8 @@ const params = {
 	about: arr[3],
 	nownot: arr[4],
 };
-let headers = {
-	type: "application/x-www-form-urlencoded",
-};
-let blob = new Blob([JSON.stringify(params)], headers);
 axios
-	.get("http://3316f45a.r2.vip.cpolar.cn/update", {
+	.get("http://3feaa692.r7.vip.cpolar.cn/update", {
 		params: {
 			time,
 			hello: arr[0],
