@@ -18,7 +18,7 @@
 
 					<span> 项目名称:低代码平台</span>
 					<span style="margin: 8px 0; line-height: 22px; display: inline-block"
-						>主要职责:视屏轮播，多按钮组合，echarts图标，时间等低代码组件及其属性设置界面开发</span
+						>主要职责:视屏轮播，多按钮组合，echarts图表，时间等低代码组件及其属性设置界面开发</span
 					>
 					<span style="line-height: 22px; display: inline-block"
 						>主要技术栈为:Vue、ElementUI、ECharts、HighChart、sass</span
