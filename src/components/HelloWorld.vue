@@ -76,6 +76,14 @@ onMounted(() => {
 
 		delay: 0.5,
 	});
+	gsap.to("#s3", {
+		opacity: 1,
+		duration: 2.5,
+		y: 0,
+		ease: "expo",
+
+		delay: 0.5,
+	});
 	gsap.to("#a1", {
 		opacity: 1,
 		duration: 3,
@@ -102,8 +110,9 @@ onMounted(() => {
 			>The Online Resume</span
 		><br />
 		<span id="s2" style="opacity: 0; transform: translateY(30px)"
-			>The dog rides Lv Bu</span
+			>Vue3+TS+Three.js</span
 		><br />
+
 		<button
 			id="a1"
 			style="opacity: 0; transform: translateY(30px)"
@@ -165,7 +174,7 @@ onMounted(() => {
 	}
 
 	.btn {
-		margin-top: 35px;
+		margin-top: 25px;
 		position: relative;
 		display: inline-block;
 		pointer-events: auto;
