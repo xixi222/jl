@@ -96,7 +96,7 @@ const params = {
 	nownot: arr[4],
 };
 axios
-	.get("http://3feaa692.r7.vip.cpolar.cn/update", {
+	.get("http://73b9621d.r7.vip.cpolar.cn/update", {
 		params: {
 			time,
 			hello: arr[0],
